@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Ángel Martínez Pérez | Portafolio de Diseño</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        dark: '#0a0a0a',
+                        darker: '#050505',
+                        accent: '#c084fc', // Un púrpura/lila elegante como acento
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animaciones personalizadas */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+</head>
+<body class="bg-darker text-gray-200 font-sans antialiased selection:bg-accent selection:text-white">
+
+    <nav class="fixed w-full z-50 top-0 transition-all duration-300 bg-darker/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-serif font-bold text-white tracking-wider">LAMP<span class="text-accent">.</span></a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#home" class="hover:text-accent transition-colors">Inicio</a>
+                <a href="#about" class="hover:text-accent transition-colors">Sobre Mí</a>
+                <a href="#portfolio" class="hover:text-accent transition-colors">Portafolio</a>
+                <a href="#contact" class="hover:text-accent transition-colors">Contacto</a>
+            </div>
+            <!-- Mobile menu button (visual only for this demo) -->
+            <button class="md:hidden text-gray-300 hover:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center relative px-6 overflow-hidden">
+        <!-- Decoración de fondo -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/20 rounded-full blur-[100px] -z-10"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] -z-10"></div>
+        
+        <div class="max-w-4xl mx-auto text-center z-10">
+            <p class="text-accent font-semibold tracking-widest uppercase mb-4 fade-in-up">Hola, soy</p>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight fade-in-up delay-100">
+                Luis Ángel Martínez Pérez
+            </h1>
+            <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto fade-in-up delay-200">
+                Diseñador Gráfico e Ilustrador Freelance. Especializado en crear identidades visuales únicas, logotipos artesanales y marcas con alma.
+            </p>
+            <div class="fade-in-up delay-300">
+                <a href="#portfolio" class="inline-block bg-accent hover:bg-purple-500 text-white font-semibold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(192,132,252,0.4)]">
+                    Ver mi trabajo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-dark">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-full md:w-1/2">
+                    <img src="https://placehold.co/600x600/1a1a1a/c084fc?text=Retrato+Luis+Angel" alt="Luis Ángel Martínez" class="rounded-2xl shadow-2xl object-cover w-full h-[500px] grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Detrás del Diseño</h2>
+                    <div class="w-16 h-1 bg-accent mb-8"></div>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                        Apasionado por el diseño visual y la ilustración. Mi enfoque se centra en entender la esencia de cada emprendimiento para transformarla en una marca memorable y versátil. 
+                    </p>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        Disfruto especialmente los proyectos con un toque artesanal y humano, donde cada trazo cuenta una historia. Ya sea desde un boceto inicial en papel o una conceptualización digital completa, mi objetivo es elevar tu proyecto al siguiente nivel gráfico.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Diseño de Logotipos</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Identidad Corporativa</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-accent mr-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Ilustración Digital</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-darker">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-4">Proyectos Destacados</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto">Una selección de mis trabajos más recientes en branding e ilustración.</p>
+            </div>
+
+            <!-- Grid de Galería -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Proyecto 1 -->
+                <div class="group relative overflow-hidden rounded-xl bg-gray-900 cursor-pointer">
+                    <img src="https://placehold.co/800x600/121212/ffffff?text=Logo+Artesanal" alt="Proyecto 1" class="w-full h-80 object-cover transform transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-accent text-sm font-semibold mb-1">Logotipo / Ilustración</span>
+                        <h3 class="text-xl font-bold text-white">La Casita Artesana</h3>
+                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">Diseño de logo ilustrado con motivos botánicos y hogareños para emprendimiento de productos caseros.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="group relative overflow-hidden rounded-xl bg-gray-900 cursor-pointer">
+                    <img src="https://placehold.co/800x600/1a1a1a/ffffff?text=Identidad+Visual" alt="Proyecto 2" class="w-full h-80 object-cover transform transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-accent text-sm font-semibold mb-1">Branding</span>
+                        <h3 class="text-xl font-bold text-white">Café Minimalista</h3>
+                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">Creación de identidad visual completa, paleta de colores y mockups para empaques de café.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="group relative overflow-hidden rounded-xl bg-gray-900 cursor-pointer">
+                    <img src="https://placehold.co/800x600/222222/ffffff?text=Ilustracion+Digital" alt="Proyecto 3" class="w-full h-80 object-cover transform transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-accent text-sm font-semibold mb-1">Ilustración</span>
+                        <h3 class="text-xl font-bold text-white">Campaña Ecológica</h3>
+                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">Serie de ilustraciones vectoriales para campaña de concientización ambiental en redes sociales.</p>
+                    </div>
+                </div>
+
+                 <!-- Proyecto 4 -->
+                 <div class="group relative overflow-hidden rounded-xl bg-gray-900 cursor-pointer">
+                    <img src="https://placehold.co/800x600/121212/ffffff?text=Diseño+Etiqueta" alt="Proyecto 4" class="w-full h-80 object-cover transform transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-accent text-sm font-semibold mb-1">Packaging</span>
+                        <h3 class="text-xl font-bold text-white">Cerveza Artesanal</h3>
+                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">Diseño de etiqueta y tipografía personalizada para nueva línea de cervezas locales.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 5 -->
+                <div class="group relative overflow-hidden rounded-xl bg-gray-900 cursor-pointer">
+                    <img src="https://placehold.co/800x600/1a1a1a/ffffff?text=Rediseño+Logo" alt="Proyecto 5" class="w-full h-80 object-cover transform transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-accent text-sm font-semibold mb-1">Rediseño</span>
+                        <h3 class="text-xl font-bold text-white">Tech Startup</h3>
+                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">Modernización de isotipo y logotipo para empresa de software emergente.</p>
+                    </div>
+                </div>
+
+                <!-- Proyecto 6 -->
+                <div class="group relative overflow-hidden rounded-xl bg-gray-900 cursor-pointer">
+                    <img src="https://placehold.co/800x600/222222/ffffff?text=Papeleria+Corporativa" alt="Proyecto 6" class="w-full h-80 object-cover transform transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-darker via-darker/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-accent text-sm font-semibold mb-1">Print / Editorial</span>
+                        <h3 class="text-xl font-bold text-white">Estudio de Arquitectura</h3>
+                        <p class="text-gray-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-2">Diseño de tarjetas de presentación, hojas membretadas y carpetas corporativas.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-dark relative">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-6">¿Trabajamos juntos?</h2>
+            <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto">
+                Estoy disponible para nuevos proyectos freelance. Si tienes una idea en mente, envíame un mensaje y empecemos a crear algo increíble.
+            </p>
+            <a href="mailto:tuemail@ejemplo.com" class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-darker bg-white rounded-full hover:bg-gray-200 transition-colors">
+                Contáctame
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+            
+            <div class="mt-16 flex justify-center space-x-6">
+                <!-- Redes sociales placeholders -->
+                <a href="#" class="text-gray-500 hover:text-accent transition-colors">
+                    <span class="sr-only">Behance</span>
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.818h-7.697c.434 2.126 3.02 2.392 4.417 1.341l3.104 1.436zm-4.708-4.529c-.312-1.396-2.585-1.579-3.23-.339h3.23zm-13.435 4.529h-5.583v-13h5.516c2.404 0 4.542.846 4.542 3.513 0 1.573-.807 2.459-2.028 2.923 1.517.476 2.622 1.488 2.622 3.42 0 2.766-2.28 3.144-5.069 3.144zm-3.083-2.185h2.511c1.378 0 2.217-.557 2.217-1.705 0-1.127-.88-1.554-2.298-1.554h-2.43v3.259zm0-5.321h2.155c1.173 0 1.956-.502 1.956-1.464 0-.964-.783-1.465-1.93-1.465h-2.181v2.929z"/></svg>
+                </a>
+                <a href="#" class="text-gray-500 hover:text-accent transition-colors">
+                    <span class="sr-only">Instagram</span>
+                    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-darker py-8 border-t border-gray-800 text-center">
+        <p class="text-gray-500 text-sm">
+            &copy; 2026 Luis Ángel Martínez Pérez. Todos los derechos reservados.
+        </p>
+    </footer>
+
+</body>
+</html>
